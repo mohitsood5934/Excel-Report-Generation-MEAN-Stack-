@@ -1,0 +1,26 @@
+<table class="table table-striped">
+    <thead>
+        <th>Serial Number</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Village</th>
+        <th>City</th>
+        <th>Email</th>
+        <th>Aadhar Number</th>
+        <th>Action</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of data;let i=index ">
+            <td>{{i+1}}</td>
+            <td>{{item.name[0].firstName }}</td>
+            <td>{{item.name[0].lastName}}</td>
+            <td>{{item.address[0].village}}</td>
+            <td>{{item.address[0].city}}</td>
+            <td>{{item.email}}</td>
+            <td>{{item.aadharNumber}}</td>
+            &nbsp;&nbsp;&nbsp;<button mat-raised-button color="primary" (click)="deleteUser(item._id)">Delete</button>
+        </tr>
+    </tbody>
+    <br>
+    <button mat-raised-button color="primary" (click)="downloadReport()">Download Report</button>
+</table>

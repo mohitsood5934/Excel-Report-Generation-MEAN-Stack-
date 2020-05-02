@@ -1,0 +1,16 @@
+<mat-toolbar color ="accent">
+  <mat-toolbar-row>
+    <button mat-icon-button>
+     
+    </button>
+    <h3>UIDAI</h3>
+    <span class="menu-spacer"></span>
+    <div>
+         <a  mat-button  [routerLink]="'/addRecord'" routerLinkActive="active" >Enter Record</a>
+         <a  mat-button  [routerLink]="'/record'" routerLinkActive="active">Registered Users</a>
+      </div>
+</mat-toolbar-row>
+
+</mat-toolbar>
+
+<router-outlet></router-outlet>
